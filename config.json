@@ -1,5 +1,10 @@
 {
   "defaults": {
     "userObjectClass": "inetOrgPerson"
-  }
+  },
+  "user": "user@domain.local",
+  "pass": "pass",
+  "url": "ldaps://localhost",
+  "port": 3000,
+  "secret": "MySecret"
 }

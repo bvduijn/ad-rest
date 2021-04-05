@@ -20,14 +20,14 @@ module.exports = {
   Users: [
     {
       verb: 'GET',
-      route: '/user',
+      route: '/users',
       title: 'Get all users',
       description: 'Pulls all users in Active Directory, with filters.',
       queries: filterQuery
     },
     {
       verb: 'POST',
-      route: '/user',
+      route: '/users',
       title: 'Add a user',
       description: 'Adds a new user to Active Directory.',
       queries: {
@@ -52,7 +52,7 @@ module.exports = {
     },
     {
       verb: 'GET',
-      route: '/user/:user',
+      route: '/users/:user',
       title: 'Get a single user',
       description: 'Pulls a single user.',
       params: { user: params.user },
@@ -60,7 +60,7 @@ module.exports = {
     },
     {
       verb: 'PUT',
-      route: '/user/:user',
+      route: '/users/:user',
       title: 'Update a user',
       description: 'Updates properties of a user.',
       params: { user: params.user },
@@ -78,21 +78,21 @@ module.exports = {
     },
     {
       verb: 'GET',
-      route: '/user/:user/exists',
+      route: '/users/:user/exists',
       title: 'User exists',
       description: 'Returns whether a user exists or not.',
       params: { user: params.user }
     },
     {
       verb: 'GET',
-      route: '/user/:user/member-of/:group',
+      route: '/users/:user/member-of/:group',
       title: 'User is a member of group',
       description: 'Returns whether a user is a member of a group or not.',
       params: { user: params.user, group: params.group }
     },
     {
       verb: 'POST',
-      route: '/user/:user/authenticate',
+      route: '/users/:user/authenticate',
       title: 'Authenticate a user',
       description: 'Runs a username and password against AD.',
       params: { user: params.user },
@@ -105,7 +105,7 @@ module.exports = {
     },
     {
       verb: 'PUT',
-      route: '/user/:user/password',
+      route: '/users/:user/password',
       title: 'Change a password',
       description: "Changes the user's password",
       params: { user: params.user },
@@ -118,7 +118,7 @@ module.exports = {
     },
     {
       verb: 'PUT',
-      route: '/user/:user/password-never-expires',
+      route: '/users/:user/password-never-expires',
       title: 'Set password never expires',
       description: 'Sets the password to never expire.',
       params: { user: params.user },
@@ -126,7 +126,7 @@ module.exports = {
     },
     {
       verb: 'PUT',
-      route: '/user/:user/password-expires',
+      route: '/users/:user/password-expires',
       title: 'Set password expires',
       description: 'Sets the password to eventually expire.',
       params: { user: params.user },
@@ -134,7 +134,7 @@ module.exports = {
     },
     {
       verb: 'PUT',
-      route: '/user/:user/enable',
+      route: '/users/:user/enable',
       title: 'Enable a user',
       description: "Enables the user's account.",
       params: { user: params.user },
@@ -142,7 +142,7 @@ module.exports = {
     },
     {
       verb: 'PUT',
-      route: '/user/:user/disable',
+      route: '/users/:user/disable',
       title: 'Disable a user',
       description: "Disables the user's account.",
       params: { user: params.user },
@@ -150,7 +150,7 @@ module.exports = {
     },
     {
       verb: 'PUT',
-      route: '/user/:user/move',
+      route: '/users/:user/move',
       title: 'Move a user',
       description:
         'Moves a user to a new location relative to the directory root.',
@@ -164,14 +164,14 @@ module.exports = {
     },
     {
       verb: 'PUT',
-      route: '/user/:user/unlock',
+      route: '/users/:user/unlock',
       title: 'Unlock a user',
       description: 'Unlocks a user.',
       params: { user: params.user }
     },
     {
       verb: 'DELETE',
-      route: '/user/:user',
+      route: '/users/:user',
       title: 'Remove a user',
       description: 'Removes a user from Active Directory.',
       params: { user: params.user }
@@ -180,14 +180,14 @@ module.exports = {
   Groups: [
     {
       verb: 'GET',
-      route: '/group',
+      route: '/groups',
       title: 'Get all groups',
       description: 'Pulls all groups in Active Directory, with filters.',
       queries: filterQuery
     },
     {
       verb: 'POST',
-      route: '/group',
+      route: '/groups',
       title: 'Add a group',
       description: 'Adds a new group to Active Directory.',
       queries: {
@@ -201,7 +201,7 @@ module.exports = {
     },
     {
       verb: 'GET',
-      route: '/group/:group',
+      route: '/groups/:group',
       title: 'Get a single group',
       description: 'Pulls a single group.',
       params: { group: params.group },
@@ -209,28 +209,28 @@ module.exports = {
     },
     {
       verb: 'GET',
-      route: '/group/:group/exists',
+      route: '/groups/:group/exists',
       title: 'Group exists',
       description: 'Returns whether a group exists or not.',
       params: { group: params.group }
     },
     {
       verb: 'POST',
-      route: '/group/:group/user/:user',
+      route: '/groups/:group/users/:user',
       title: 'Add user to group',
       description: 'Adds a user to a group.',
       params: { group: params.group, user: params.user }
     },
     {
       verb: 'DELETE',
-      route: '/group/:group/user/:user',
+      route: '/groups/:group/users/:user',
       title: 'Remove user from group',
       description: 'Removes a user from a group.',
       params: { group: params.group, user: params.user }
     },
     {
       verb: 'DELETE',
-      route: '/group/:group',
+      route: '/groups/:group',
       title: 'Remove a group',
       description: 'Removes the group from Active Directory.',
       params: { group: params.group }
@@ -287,7 +287,7 @@ module.exports = {
       verb: 'GET',
       route: '/other',
       title: 'Get all other Objects',
-      description: 'Pulls all non-User/Group Active Directory objects.',
+      description: 'Pulls all non-User/groups Active Directory objects.',
       queries: filterQuery
     },
     {
